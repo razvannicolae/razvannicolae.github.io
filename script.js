@@ -3,8 +3,12 @@
   const root = document.documentElement;
   const KEY = "theme";
 
+  const meta = document.getElementById("theme-color");
   function apply(theme) {
     root.setAttribute("data-theme", theme);
+    if (meta) {
+      meta.setAttribute("content", theme === "dark" ? "#0b0e15" : "#eef1f8");
+    }
   }
 
   const saved = localStorage.getItem(KEY);
