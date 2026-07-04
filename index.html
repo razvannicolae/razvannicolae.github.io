@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Razvan Nicolae · Software Engineer</title>
+  <meta name="description" content="Razvan Nicolae is a CS and Math student at UVA building machine learning systems, with a growing interest in quantitative finance." />
+  <meta name="author" content="Razvan Nicolae" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Razvan Nicolae · Software Engineer" />
+  <meta property="og:description" content="CS and Math at UVA. Machine learning systems, software engineering, and quantitative finance." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <span class="orb orb-4"></span>
+    <span class="orb orb-5"></span>
+    <span class="sheen"></span>
+    <canvas id="bg-canvas"></canvas>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="brand">Razvan Nicolae</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <p class="eyebrow">Software Engineer</p>
+      <h1>Razvan Nicolae</h1>
+      <p class="lede">
+        I'm a CS and Math student at the University of Virginia. Most of my
+        work is in <em>machine learning</em>, from LLM systems to computer
+        vision, with interests in quantitative finance and full-stack development. 
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Work</a>
+        <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+      </div>
+      <ul class="hero-meta">
+        <li><span>Location</span>Charlottesville, VA</li>
+        <li><span>Focus</span>AI / ML · Quant Finance</li>
+        <li><span>GPA</span>4.0 / 4.0</li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a CS &amp; Math undergrad at UVA. Most of what I build sits at
+            the point <strong>where a model meets the physical world</strong>.
+            I've built powerful visualization tools for research labs, used
+            sentiment analysis models to analyze market sentiment, and written
+            the safety checks that sit between an LLM and a robot's motors.
+          </p>
+          <p>
+            Machine learning is what interests me most right now. It sits at
+            the intersection of math and computer science, and I like drawing
+            on both to build AI systems for all kinds of problems, whether
+            that's in health, finance, or robotics. When I'm not busy with
+            classes or projects, I'm usually watching soccer, playing sports
+            with friends, or investing on the side.
+          </p>
+        </div>
+        <div class="about-side">
+          <h3>Education</h3>
+          <p class="edu-school">University of Virginia</p>
+          <p class="edu-degree">B.S. Computer Science &amp; Mathematics</p>
+          <p class="edu-meta">Expected May 2029 · GPA 4.0 · SAT 1560</p>
+          <p class="edu-courses">
+            Data Structures &amp; Algorithms, Software Development, Computer
+            Systems, Discrete Math, Probability, Linear Algebra
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-when">Jun 2026 – Present</div>
+          <div class="timeline-body">
+            <h3>Software Developer Intern</h3>
+            <p class="timeline-org">Booz Allen Hamilton · McLean, VA</p>
+            <ul>
+              <li>Built a reusable <strong>real-time safety gate</strong> for LLM-driven humanoids, validating task-planning intents and execution-layer motion commands at two checkpoints with deterministic rules and AWS Bedrock judging.</li>
+              <li>Shipped a React/TypeScript operator console (10 panels) to author tighten-only policies and run replays, backed by OpenTelemetry/Phoenix, Postgres, and MinIO.</li>
+              <li>Built the execution gateway routing 9 semantic actions to A* path-planning or RL control, hot-swapping 3 policy backends including CPU TorchScript/ONNX inference across a 5-service Docker deploy.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-when">Jan 2026 – Jun 2026</div>
+          <div class="timeline-body">
+            <h3>Computer Vision Research Assistant</h3>
+            <p class="timeline-org">UVA Engineering Link Lab · Charlottesville, VA</p>
+            <ul>
+              <li>Built <strong>AriaData</strong>, a unified Python interface over Meta Project Aria's SDK and Machine Perception Services, loading eye-gaze, hand-tracking, and SLAM streams into timestamp-indexed pandas DataFrames.</li>
+              <li>Added lossless JSON serialization and a Rerun 3D timeline viewer for gaze points, 21-landmark hand poses, and wrist/palm trajectories.</li>
+              <li>Integrated hand-tracking data with Robosuite, mapping a human wrist's 3D pose onto a simulated Franka Panda arm for real-to-sim manipulation tests.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-when">Jun 2025 – Aug 2025</div>
+          <div class="timeline-body">
+            <h3>Research Intern</h3>
+            <p class="timeline-org">HHMI Janelia Research Campus · Ashburn, VA</p>
+            <ul>
+              <li>Engineered a reproducible <strong>3D object-tracking system</strong> for neuroscience experiments using a UR3E robotic arm and four Emergent Vision cameras.</li>
+              <li>Developed an OpenCV camera-calibration pipeline with ChArUco boards and sparse-bundle adjustment, achieving sub-0.1 pixel re-projection error.</li>
+              <li>Trained and deployed a YOLOv8n model on a 1,000+ image dataset at sub-2ms inference, cutting workflow time by 20%.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-when">Jun 2024 – Jun 2025</div>
+          <div class="timeline-body">
+            <h3>Software Engineering Intern</h3>
+            <p class="timeline-org">Fuel and Tire Saver Systems LLC · Sterling, VA</p>
+            <ul>
+              <li>Redesigned an <strong>internal JavaScript web app</strong> with a custom algorithm eliminating message-logging redundancy, cutting memory usage by 10%.</li>
+              <li>Sustained 95%+ uptime on mission-critical systems by resolving SQL synchronization, VirtualBox KVM, and payment-processing failures.</li>
+              <li>Built a socket-based system streaming real-time battery-voltage and nitrogen-concentration metrics from 5+ field devices to an admin dashboard.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="card">
+          <div class="card-top">
+            <h3>Baby Diagnostics</h3>
+            <a class="card-link" href="https://github.com/razvannicolae/baby-diagnostics" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>React + FastAPI mobile web app that lets NICU staff scan diagnostic test strips by phone. OpenCV matches median HSV values against calibrated references for pH, creatinine, and vitamin readings.</p>
+          <p class="card-extra">Secured with JWT auth, AES-256 PII encryption, and in-memory image handling (only SHA-256 hashes persist); streams Ollama explanations over WebSocket.</p>
+          <ul class="tags">
+            <li>React</li><li>TypeScript</li><li>FastAPI</li><li>OpenCV</li><li>PostgreSQL</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Food Facts MCP Server</h3>
+            <a class="card-link" href="https://github.com/razvannicolae/Food-Facts-MCP" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>Model Context Protocol server exposing 13 tools that serve AI assistants real-time, citation-backed nutrition data from USDA FoodData Central and FatSecret across 4M+ foods.</p>
+          <p class="card-extra">OAuth2 client and SQLite caching cut repeat-query latency from 1–2s to sub-1ms, hardened by a 69-test suite.</p>
+          <ul class="tags">
+            <li>Python</li><li>FastMCP</li><li>SQLite</li><li>REST</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Digital Human</h3>
+            <a class="card-link" href="https://github.com/razvannicolae/digital-human" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>Real-time conversational avatar system that lets users talk to an AI digital human, orchestrating Groq (Llama 3.3-70B), ElevenLabs speech, and Tavus/Daily.co video into one streaming pipeline.</p>
+          <p class="card-extra">WebSocket-driven Node/Express backend streams each turn end-to-end (LLM → speech → lip-sync) for low-latency replies.</p>
+          <ul class="tags">
+            <li>React</li><li>TypeScript</li><li>Node/Express</li><li>WebSocket</li><li>Groq</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Consumer Sentiment Analysis</h3>
+            <a class="card-link" href="https://github.com/razvannicolae/sharkninja_sentiment_analysis" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>Multi-platform data pipeline using the Apify API to scrape and aggregate 6,000+ reviews from Amazon, Instagram, and TikTok across four competitor brands.</p>
+          <p class="card-extra">Deployed a CardiffNLP RoBERTa transformer via HuggingFace for sentiment classification with automated brand-insight reports.</p>
+          <ul class="tags">
+            <li>Python</li><li>Apify</li><li>HuggingFace</li><li>NumPy</li><li>pandas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Muscle Metrics</h3>
+            <a class="card-link" href="https://github.com/razvannicolae/muscle-metrics" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>Biomechanics analysis system with OpenPose and sEMG sensors, training CNNs to predict myoelectric patterns across five muscles and classify exercise form at 75% accuracy.</p>
+          <p class="card-extra">Built a 10,000+ frame training dataset of paired motion-capture and biosignal recordings with NumPy and Arduino.</p>
+          <ul class="tags">
+            <li>Python</li><li>NumPy</li><li>OpenPose</li><li>Arduino</li>
+          </ul>
+        </article>
+
+        <article class="card card-muted">
+          <div class="card-top">
+            <h3>More on GitHub</h3>
+            <a class="card-link" href="https://github.com/razvannicolae" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+          </div>
+          <p>Additional experiments across ML, systems, and full-stack development live on my GitHub.</p>
+          <a class="text-link" href="https://github.com/razvannicolae" target="_blank" rel="noopener">github.com/razvannicolae →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Java</li>
+            <li>C / C++</li><li>SQL</li><li>HTML / CSS</li><li>MATLAB</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks &amp; Libraries</h3>
+          <ul>
+            <li>PyTorch</li><li>TensorFlow</li><li>ONNX</li><li>OpenCV</li>
+            <li>pandas</li><li>NumPy</li><li>FastAPI</li><li>React</li>
+            <li>Node / Express</li><li>Django</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <ul>
+            <li>AWS</li><li>Docker</li><li>PostgreSQL</li><li>SQLite</li>
+            <li>Git / GitHub</li><li>Linux</li><li>REST / WebSocket</li>
+            <li>CI/CD</li><li>Agentic AI / LLMs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact">
+        <p class="contact-lede">
+          I'm looking for internships in software engineering, machine
+          learning, and quantitative finance. If you'd like to talk about any
+          of that, email is the best way to reach me.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:razvannicolae@outlook.com">razvannicolae@outlook.com</a>
+          <a href="https://linkedin.com/in/razvannicolae" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/razvannicolae" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Razvan Nicolae</p>
+    <p>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="bg.js"></script>
+</body>
+</html>
